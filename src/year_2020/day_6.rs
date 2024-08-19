@@ -34,11 +34,11 @@ fn part_2(groups: &Vec<Vec<&str>>) -> usize {
     for group in groups {
         let mut yes: HashSet<char> = HashSet::new();
 
-        &group[..1].get(0).unwrap().chars().for_each(|answer| {
+        group[..1].get(0).unwrap().chars().for_each(|answer| {
             yes.insert(answer);
         });
 
-        &group[1..].iter().for_each(|person_answers| {
+        group[1..].iter().for_each(|person_answers| {
             yes.retain(|x| person_answers.contains(*x));
         });
 

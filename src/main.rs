@@ -48,6 +48,10 @@ fn main() {
                     "7" => year_2020::day_7::run(contents),
                     "8" => year_2020::day_8::run(contents),
                     "9" => year_2020::day_9::run(contents),
+                    "10" => year_2020::day_10::run(contents),
+                    "11" => year_2020::day_11::run(contents),
+                    "12" => year_2020::day_12::run(contents),
+                    "13" => year_2020::day_13::run(contents),
 
                     _ => eprintln!("Invalid day: {}", day),
                 },

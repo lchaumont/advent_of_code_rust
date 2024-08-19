@@ -4,7 +4,7 @@ pub fn run(input: String) {
     let numbers: Vec<usize> = input.lines().map(|x| x.parse().unwrap()).collect();
 
     let part_1_result = part_1(&numbers);
-    println!("Part 1: {:?}", part_1(&numbers));
+    println!("Part 1: {:?}", part_1_result);
 
     match part_1_result {
         None => {}
@@ -22,7 +22,7 @@ fn part_1(numbers: &[usize]) -> Option<usize> {
     for i in 0..numbers.len() {
         let current = numbers[i];
 
-        if (i < queue_size) {
+        if i < queue_size {
             queue.push_back(current)
         } else {
             let mut found = false;
