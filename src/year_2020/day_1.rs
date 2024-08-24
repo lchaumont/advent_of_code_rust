@@ -7,7 +7,7 @@ pub fn run(input: String) {
 
 fn part_1(numbers: &[u32]) -> Option<u32> {
     for (i, num1) in numbers.iter().enumerate() {
-        for num2 in &numbers[i..] {
+        for num2 in numbers[i..].iter() {
             if num1 + num2 == 2020 {
                 return Some(num1 * num2);
             }
@@ -15,12 +15,16 @@ fn part_1(numbers: &[u32]) -> Option<u32> {
     }
 
     None
-}
+}   
 
 fn part_2(numbers: &[u32]) -> Option<u32> {
     for (i, num1) in numbers.iter().enumerate() {
         for (j, num2) in numbers[i..].iter().enumerate() {
-            for num3 in &numbers[j..] {
+            if num1 + num2 > 2020 {
+                continue;
+            }
+
+            for num3 in numbers[j..].iter() {
                 if num1 + num2 + num3 == 2020 {
                     return Some(num1 * num2 * num3);
                 }
