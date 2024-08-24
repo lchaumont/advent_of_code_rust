@@ -15,7 +15,7 @@ fn part_1(numbers: &[u32]) -> Option<u32> {
     }
 
     None
-}   
+}
 
 fn part_2(numbers: &[u32]) -> Option<u32> {
     for (i, num1) in numbers.iter().enumerate() {
