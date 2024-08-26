@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 pub fn run(input: String) {
     let numbers: Vec<i32> = input.split(",").map(|x| x.parse().unwrap()).collect();
 

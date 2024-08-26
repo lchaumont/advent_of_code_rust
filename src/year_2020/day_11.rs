@@ -24,6 +24,7 @@ impl Board {
         }
     }
 
+    /*
     fn count_occupied_neighbors_at_position(&self, (target_x, target_y): Position) -> usize {
         let possible_deltas: [(isize, isize); 8] = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)];
 
@@ -36,6 +37,8 @@ impl Board {
             })
             .count()
     }
+
+     */
 
     fn count_visible_at_position(&self, position: Position) -> usize {
         let directions: [(isize, isize); 8] = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)];
@@ -97,6 +100,7 @@ pub fn run(input: String) {
     println!("Part 2: {:?}", part_2(board));
 }
 
+/*
 fn iteration_part1(board: &Board) -> (Board, bool) {
     let mut next_board = Board::new(board.width, board.height);
     let mut changed = false;
@@ -147,6 +151,8 @@ fn part_1(initial_board: Board) -> isize {
         _ => false
     }).count() as isize
 }
+
+ */
 
 fn iteration_part2(board: &Board) -> (Board, bool) {
     let mut next_board = Board::new(board.width, board.height);

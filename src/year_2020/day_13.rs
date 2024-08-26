@@ -1,5 +1,3 @@
-use std::process::id;
-
 pub fn run(input: String) {
     let mut splitted = input.split("\r\n");
     let timestamp = splitted.next().unwrap().parse::<usize>().unwrap();

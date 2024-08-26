@@ -33,7 +33,7 @@ fn part_1(instructions: &Vec<Instruction>) -> usize {
         match instruction {
             Instruction::MASK(mask) => {
                 current_mask = mask;
-            },
+            }
             Instruction::Mem(mem, value) => {
                 let mut binary = format!("{:036b}", value);
 
@@ -50,7 +50,7 @@ fn part_1(instructions: &Vec<Instruction>) -> usize {
                 }
 
                 result.insert(*mem, usize::from_str_radix(&binary, 2).unwrap());
-            },
+            }
         }
     }
 
@@ -66,7 +66,7 @@ fn part_2(instructions: &Vec<Instruction>) -> usize {
         match instruction {
             Instruction::MASK(mask) => {
                 current_mask = mask;
-            },
+            }
 
             Instruction::Mem(mem, value) => {
                 let mut binary = format!("{:036b}", mem);
@@ -91,7 +91,7 @@ fn part_2(instructions: &Vec<Instruction>) -> usize {
 
                 for i in 0..2_usize.pow(floating.len() as u32) {
                     let mut binary = binary.clone();
-                    let mut floating = floating.clone();
+                    let floating = floating.clone();
 
                     for (j, c) in format!("{:0b}", i).chars().rev().enumerate() {
                         if c == '1' {
@@ -107,7 +107,7 @@ fn part_2(instructions: &Vec<Instruction>) -> usize {
 
                     result.insert(usize::from_str_radix(&binary, 2).unwrap(), *value);
                 }
-            },
+            }
         }
     }
 
