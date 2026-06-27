@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let mut numbers: Vec<usize> = input.lines().map(|x| x.parse().unwrap()).collect();
     numbers.push(0);
     numbers.sort();

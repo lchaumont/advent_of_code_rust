@@ -1,24 +1,24 @@
 use std::collections::HashSet;
 use regex::Regex;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     part_1(&input);
     part_2(&input);
 }
 
-fn part_1(input: &String) {
+fn part_1(input: &str) {
     let mut set_of_bags: HashSet<String> = HashSet::new();
     get_bags_that_can_contains_bag(input, "shiny gold", &mut set_of_bags);
 
     println!("Part 1: {:?}", set_of_bags.len());
 }
 
-fn part_2(input: &String) {
+fn part_2(input: &str) {
     let count: u64 = get_bags_that_bag_is_contained(input, "shiny gold");
     println!("Part 2: {:?}", count);
 }
 
-fn get_bags_that_can_contains_bag(input: &String, current_bag: &str, set_of_bags: &mut HashSet<String>) {
+fn get_bags_that_can_contains_bag(input: &str, current_bag: &str, set_of_bags: &mut HashSet<String>) {
     let mut new_bags = HashSet::new();
 
     for line in input.lines() {
@@ -52,7 +52,7 @@ fn extract_bags_from_line(line: &str) -> Vec<String> {
     bags
 }
 
-fn get_bags_that_bag_is_contained(input: &String, current_bag: &str) -> u64 {
+fn get_bags_that_bag_is_contained(input: &str, current_bag: &str) -> u64 {
     for line in input.lines() {
         if extract_key_bag_from_line(line) == current_bag {
             let bags = extract_bags_from_line(line);

@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let data: Vec<OPERATION> = input.lines().map(|x| {
         let mut split = x.split(" ");
         let operation = split.next().unwrap();

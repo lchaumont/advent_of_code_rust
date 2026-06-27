@@ -1,4 +1,4 @@
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let chars: Vec<Vec<char>> = input.lines().map(|x| x.chars().collect()).collect();
 
     println!("Part 1: {:?}", part_1(&chars));

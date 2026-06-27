@@ -1,4 +1,4 @@
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let numbers: Vec<u32> = input.lines().map(|x| x.parse().unwrap()).collect();
 
     println!("Part 1: {:?}", part_1(&numbers));

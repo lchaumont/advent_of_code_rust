@@ -1,4 +1,4 @@
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let mut splitted = input.split("\r\n");
     let timestamp = splitted.next().unwrap().parse::<usize>().unwrap();
     let bus_ids: Vec<&str> = splitted.next().unwrap().split(",").collect();

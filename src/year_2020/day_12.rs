@@ -35,7 +35,7 @@ fn turn_counter_clockwise(current: Orientation) -> Orientation {
     }
 }
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let directions: Vec<Direction> = input.lines().map(|x| {
         let value = x[1..].parse::<i64>().unwrap();
         match &x[0..1] {

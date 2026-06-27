@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let instructions: Vec<Instruction> = input.lines().map(|x| {
         let mut parts = x.split(" = ");
         let left = parts.next().unwrap();

@@ -71,7 +71,7 @@ impl Board {
     }
 }
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let mut cells: HashMap<Position, CellState> = HashMap::new();
 
     for (line_index, line) in input.trim_end().split("\r\n").enumerate() {

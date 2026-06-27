@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let groups: Vec<Vec<&str>> = input
         .split("\n\r\n")
         .map(|x| x.split_whitespace().collect())

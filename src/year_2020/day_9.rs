@@ -1,6 +1,6 @@
 use std::collections::VecDeque;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let numbers: Vec<usize> = input.lines().map(|x| x.parse().unwrap()).collect();
 
     let part_1_result = part_1(&numbers);

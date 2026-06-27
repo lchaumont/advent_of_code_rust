@@ -1,4 +1,4 @@
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let numbers: Vec<i32> = input.split(",").map(|x| x.parse().unwrap()).collect();
 
     println!("Part 1: {:?}", solve(&numbers, 2020));

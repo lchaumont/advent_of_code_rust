@@ -1,4 +1,4 @@
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let data: Vec<Vec<String>> = input.lines().map(|x| {
         x.split(['-', ' ', ':'])
             .filter(|x| !x.is_empty())

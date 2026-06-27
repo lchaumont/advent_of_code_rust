@@ -1,7 +1,7 @@
 use regex::Regex;
 use std::collections::HashMap;
 
-pub fn run(input: String) {
+pub fn run(input: &str) {
     let passports: Vec<Vec<&str>> = input
         .split("\n\r\n")
         .map(|x| x.split_whitespace().collect())
